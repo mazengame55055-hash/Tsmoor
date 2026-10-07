@@ -1,0 +1,7 @@
+services:
+  renderbot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data   # database + encryption key + logs: BACK THIS UP
